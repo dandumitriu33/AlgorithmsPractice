@@ -78,5 +78,53 @@ namespace AlgorithmsPractice
 
             return result;
         }
+
+        public static int[] SortArrayParityTONSON(int[] input)
+        {
+            int[] output = new int[input.Length];
+            int j = 0;
+            foreach (int number in input)
+            {
+                if (number % 2 == 0)
+                {
+                    output[j] = number;
+                    j++;
+                }
+            }
+            foreach (int number in input)
+            {
+                if (number % 2 != 0)
+                {
+                    output[j] = number;
+                    j++;
+                }
+            }
+            // printing
+            foreach (int number in output)
+            {
+                Console.Write($"{number} ");
+            }
+            return output;
+        }
+        public static int[] SortArrayParityTONSO1(int[] input)
+        {
+            int i = 0;
+            for (int j = 0; j < input.Length; j++)
+            {
+                if (input[j] % 2 == 0)
+                {
+                    int temp = input[i];
+                    input[i] = input[j];
+                    input[j] = temp;
+                    i++;
+                }
+            }
+            // printing
+            foreach (int number in input)
+            {
+                Console.Write($"{number} ");
+            }
+            return input;
+        }
     }
 }
