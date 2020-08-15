@@ -21,7 +21,6 @@ namespace AlgorithmsPractice
             }
             return result;
         }
-
         public static int ThirdMaximumNumber(int[] sourceArray)
         {
             int result = 0;
@@ -52,7 +51,6 @@ namespace AlgorithmsPractice
             Console.WriteLine(result);
             return result;
         }
-
         public static int MaxHourglass(int[,] sourceArray)
         {
             int axisLength = 6; // 6x6 matrix
@@ -78,7 +76,6 @@ namespace AlgorithmsPractice
 
             return result;
         }
-
         public static int[] SortArrayParityTONSON(int[] input)
         {
             int[] output = new int[input.Length];
@@ -126,5 +123,39 @@ namespace AlgorithmsPractice
             }
             return input;
         }
+        public static int[,] FlipInvert(int[,] input)
+        {
+            Console.WriteLine($"Length of input: (4) {input.GetLength(0)}");
+            // trick = if left and right elements are the same, change them, if they are not, leave as is
+            // this will resolve flip + invert; un-intuitive trick
+            for (int i = 0; i < input.GetLength(0); i++)
+            {
+                int left = 0;
+                int right = input.GetLength(0) - 1;
+
+                while (left < right)
+                {
+                    if (input[i, left] == input[i, right])
+                    {
+                        input[i, left] = 1 - input[i, left];
+                        input[i, right] = 1 - input[i, right];
+                    }
+                    left++;
+                    right--;
+                }
+            }
+            // printing
+            for (int i = 0; i < input.GetLength(0); i++)
+            {
+                for (int j = 0; j < input.GetLength(1); j++)
+                {
+                    Console.Write($"{input[i,j]} ");
+                }
+                Console.WriteLine();
+            }
+
+            return input;
+        }
+
     }
 }

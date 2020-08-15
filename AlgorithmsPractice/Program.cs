@@ -27,14 +27,29 @@ namespace AlgorithmsPractice
             //ArrayExercises.MaxHourglass(sourceArray);
 
             // Sort array by parity - even numbers first, then odd numbers
-            // Time complexity O(N), Space complexity O(N)
-            int[] sourceArray = new[] { 3, 4, 2, 1 }; // expected 4 2 3 1
-            ArrayExercises.SortArrayParityTONSON(sourceArray);
-            // Time complxity O(N), Space complexity O(1)
-            Console.WriteLine();
-            ArrayExercises.SortArrayParityTONSO1(sourceArray);
+            //// Time complexity O(N), Space complexity O(N)
+            //int[] sourceArray = new[] { 3, 4, 2, 1 }; // expected 4 2 3 1
+            //ArrayExercises.SortArrayParityTONSON(sourceArray);
+            //// Time complxity O(N), Space complexity O(1)
+            //Console.WriteLine();
+            //ArrayExercises.SortArrayParityTONSO1(sourceArray);
 
-
+            // Flip Invert an array of binary values (trick solution with pointers)
+            int[,] sourceArray = new int[,] 
+            {
+                { 1, 1, 0, 0 },
+                { 1, 0, 0, 1 },
+                { 0, 1, 1, 1 },
+                { 1, 0, 1, 0}
+            };
+            // expected result
+            //{
+            //    { 1, 1, 0, 0},
+            //    { 0, 1, 1, 0},
+            //    { 0, 0, 0, 1},
+            //    { 1, 0, 1, 0}
+            //}
+            ArrayExercises.FlipInvert(sourceArray);
 
 
 
