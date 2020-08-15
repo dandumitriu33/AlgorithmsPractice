@@ -52,5 +52,31 @@ namespace AlgorithmsPractice
             Console.WriteLine(result);
             return result;
         }
+
+        public static int MaxHourglass(int[,] sourceArray)
+        {
+            int axisLength = 6; // 6x6 matrix
+            int result = -63;
+            // boundaries
+            for (int i = 0; i <= (axisLength - 1) - 2; i++)
+            {
+                for (int j = 0; j <= (axisLength - 1) - 2; j++)
+                {
+                    // hourglass structure
+                    int sum = sourceArray[i, j] + sourceArray[i, j + 1] + sourceArray[i, j + 2] + 
+                                                  sourceArray[i + 1, j + 1] + 
+                          sourceArray[i + 2, j] + sourceArray[i + 2, j + 1] + sourceArray[i + 2, j + 2];
+                    Console.WriteLine($"This sum is: {sum}");
+                    if (sum > result)
+                    {
+                        result = sum;
+                    }
+                }
+            }
+            // printing
+            Console.WriteLine(result);
+
+            return result;
+        }
     }
 }

@@ -11,9 +11,26 @@ namespace AlgorithmsPractice
             //ArrayExercises.ReverseArray(sourceArray);
 
             // Find the 3rd maximum number
-            int[] sourceArray = new int[6] { 1, 2, 3, 4, 5, 6 }; // expected 4
-            ArrayExercises.ThirdMaximumNumber(sourceArray);
+            //int[] sourceArray = new int[6] { 1, 2, 3, 4, 5, 6 }; // expected 4
+            //ArrayExercises.ThirdMaximumNumber(sourceArray);
 
+            // Max Hourglass sum in matrix (6x6 array) -9 is the lowest number
+            int[,] sourceArray = new int[,]
+            {
+                { -9, -9, -9, 1, 1, 1 },
+                { 0, -9, 0, 4, 3, 2},
+                { -9, -9, -9, 1, 2, 3},
+                { 0, 0, 8, 6, 6, 0},
+                { 0, 0, 0, -2, 0, 0},
+                { 0, 0, 1, 2, 4, 0}
+            };
+            ArrayExercises.MaxHourglass(sourceArray);
+ 
+ 
+
+
+
+            
 
         }
     }
