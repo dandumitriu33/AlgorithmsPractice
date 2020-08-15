@@ -6,9 +6,12 @@ namespace AlgorithmsPractice
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
-            // test
-            Console.WriteLine($"From a class: {Multiply.MultiplyInts(2, 3)}");
+            // Reverse an array
+            int[] sourceArray = new int[5] { 9, 8, 7, 6, 5 };
+            ArrayExercises.ReverseArray(sourceArray);
+            
+
+
         }
     }
 }
