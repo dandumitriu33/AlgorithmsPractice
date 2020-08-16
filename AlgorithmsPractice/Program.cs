@@ -133,6 +133,8 @@ namespace AlgorithmsPractice
             Console.WriteLine("Node removed from list.");
             PrintLinkedList(newHead);
 
+            // Reverse print a linked list
+            ReversePrintRecursive(newHead);
             #endregion
 
 

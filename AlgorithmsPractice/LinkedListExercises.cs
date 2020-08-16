@@ -33,5 +33,15 @@ namespace AlgorithmsPractice
             current.Next = tail;
             return current;
         }
+
+        public static void ReversePrintRecursive(SinglyLinkedListNode head)
+        {
+            if (head == null)
+            {
+                return;
+            }
+            ReversePrintRecursive(head.Next);
+            Console.WriteLine(head.Data);
+        }
     }
 }
