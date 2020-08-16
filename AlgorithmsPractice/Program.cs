@@ -8,6 +8,14 @@ namespace AlgorithmsPractice
         static void Main(string[] args)
         {
             #region Array exercises
+
+            // First int duplicate in Array - values only between 1 and array.length; all positive
+            // the first occurence of the 2nd number - the number itself not the index
+            int[] array1 = new int[6] { 1, 2, 1, 2, 3, 3 }; // 1
+            int[] array2 = new int[6] { 2, 1, 3, 5, 3, 2 }; // 3
+            int[] array3 = new int[6] { 1, 2, 3, 4, 5, 6 }; // -1
+
+
             // Reverse an array
             //int[] sourceArray = new int[5] { 9, 8, 7, 6, 5 }; // expected 5, 6, 7, 8, 9
             //ArrayExercises.ReverseArray(sourceArray);
@@ -140,21 +148,24 @@ namespace AlgorithmsPractice
             #region String exercises
 
             // First non-repeating character in the string - that character is only there once
-            string input1 = "aaabcccdeeef"; // b
-            string input2 = "abcbad"; // c
-            string input3 = "abcabcabc"; // _
-            Console.WriteLine(StringExercises.FirstNonRepeatingTNSquared(input1));
-            Console.WriteLine(StringExercises.FirstNonRepeatingTNSquared(input2));
-            Console.WriteLine(StringExercises.FirstNonRepeatingTNSquared(input3));
-            Console.WriteLine("O 2N w Dictionary");
-            Console.WriteLine(StringExercises.FirstNonRepeatingTN2Dictionary(input1));
-            Console.WriteLine(StringExercises.FirstNonRepeatingTN2Dictionary(input2));
-            Console.WriteLine(StringExercises.FirstNonRepeatingTN2Dictionary(input3));
-            Console.WriteLine("O 2N w Array");
-            Console.WriteLine(StringExercises.FirstNonRepeatingTN2Array(input1));
-            Console.WriteLine(StringExercises.FirstNonRepeatingTN2Array(input2));
-            Console.WriteLine(StringExercises.FirstNonRepeatingTN2Array(input3));
-
+            //string input1 = "aaabcccdeeef"; // b
+            //string input2 = "abcbad"; // c
+            //string input3 = "abcabcabc"; // _
+            //Console.WriteLine(StringExercises.FirstNonRepeatingTNSquared(input1));
+            //Console.WriteLine(StringExercises.FirstNonRepeatingTNSquared(input2));
+            //Console.WriteLine(StringExercises.FirstNonRepeatingTNSquared(input3));
+            //Console.WriteLine("O 2N w Dictionary");
+            //Console.WriteLine(StringExercises.FirstNonRepeatingTN2Dictionary(input1));
+            //Console.WriteLine(StringExercises.FirstNonRepeatingTN2Dictionary(input2));
+            //Console.WriteLine(StringExercises.FirstNonRepeatingTN2Dictionary(input3));
+            //Console.WriteLine("O 2N w Array");
+            //Console.WriteLine(StringExercises.FirstNonRepeatingTN2Array(input1));
+            //Console.WriteLine(StringExercises.FirstNonRepeatingTN2Array(input2));
+            //Console.WriteLine(StringExercises.FirstNonRepeatingTN2Array(input3));
+            //Console.WriteLine("IndexOf and LastIndexOf(Char) build in functions equality");
+            //Console.WriteLine(StringExercises.FirstNonRepeatingIndexEquality(input1));
+            //Console.WriteLine(StringExercises.FirstNonRepeatingIndexEquality(input2));
+            //Console.WriteLine(StringExercises.FirstNonRepeatingIndexEquality(input3));
 
             #endregion
 

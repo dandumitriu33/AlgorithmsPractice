@@ -80,6 +80,18 @@ namespace AlgorithmsPractice
             return "_";
         }
 
+        public static string FirstNonRepeatingIndexEquality(string input)
+        {
+            for (int i = 0; i < input.Length; i++)
+            {
+                if (input.IndexOf(input[i]) == input.LastIndexOf(input[i]))
+                {
+                    return input[i].ToString();
+                }
+            }
+            return "_";
+        }
+
 
     }
 }
