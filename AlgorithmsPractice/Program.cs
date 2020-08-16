@@ -66,78 +66,97 @@ namespace AlgorithmsPractice
             #endregion
 
             #region Linked Lists exercises
-            
-            SinglyLinkedListNode head = new SinglyLinkedListNode() { Data = 12, Next = null };
 
-            SinglyLinkedListNode first = new SinglyLinkedListNode() { Data = 24, Next = null };
-            head.Next = first;
+            //SinglyLinkedListNode head = new SinglyLinkedListNode() { Data = 12, Next = null };
 
-            SinglyLinkedListNode second = new SinglyLinkedListNode() { Data = 36, Next = null };
-            first.Next = second;
+            //SinglyLinkedListNode first = new SinglyLinkedListNode() { Data = 24, Next = null };
+            //head.Next = first;
 
-            SinglyLinkedListNode third = new SinglyLinkedListNode() { Data = 48, Next = null };
-            second.Next = third;
+            //SinglyLinkedListNode second = new SinglyLinkedListNode() { Data = 36, Next = null };
+            //first.Next = second;
 
-            SinglyLinkedListNode insertTest = new SinglyLinkedListNode() { Data = 16, Next = null };
-            insertTest.Next = head.Next;
-            head.Next = insertTest;
+            //SinglyLinkedListNode third = new SinglyLinkedListNode() { Data = 48, Next = null };
+            //second.Next = third;
 
-            // Print the elements of a Linked List w/ insert
-            //PrintLinkedList(head);
+            //SinglyLinkedListNode insertTest = new SinglyLinkedListNode() { Data = 16, Next = null };
+            //insertTest.Next = head.Next;
+            //head.Next = insertTest;
 
-            // Insert  node at the Tail of the Linked List
-            //PrintLinkedList(head);
-            SinglyLinkedListNode tailNode = new SinglyLinkedListNode() { Data = 60, Next = null };
-            SinglyLinkedListNode tail = AddToTail(head, tailNode);
-            //Console.WriteLine("Tail added.");
-            //PrintLinkedList(head);
+            //// Print the elements of a Linked List w/ insert
+            ////PrintLinkedList(head);
 
-            // Insert node at the Head
-            //PrintLinkedList(head);
-            SinglyLinkedListNode newHead = new SinglyLinkedListNode() { Data = 10, Next = null };
-            newHead.Next = head;
-            //Console.WriteLine("New Head added");
+            //// Insert  node at the Tail of the Linked List
+            ////PrintLinkedList(head);
+            //SinglyLinkedListNode tailNode = new SinglyLinkedListNode() { Data = 60, Next = null };
+            //SinglyLinkedListNode tail = AddToTail(head, tailNode);
+            ////Console.WriteLine("Tail added.");
+            ////PrintLinkedList(head);
+
+            //// Insert node at the Head
+            ////PrintLinkedList(head);
+            //SinglyLinkedListNode newHead = new SinglyLinkedListNode() { Data = 10, Next = null };
+            //newHead.Next = head;
+            ////Console.WriteLine("New Head added");
+            ////PrintLinkedList(newHead);
+
+            //// Insert node at position - 0 starting
+            ////PrintLinkedList(newHead);
+            //SinglyLinkedListNode nodeToInsert = new SinglyLinkedListNode() { Data = 2222, Next = null };
+            //int position = 2;
+            //int counter = 1;
+            //SinglyLinkedListNode current = newHead;
+
+            //while (counter < position)
+            //{
+            //    current = current.Next;
+            //    counter++;
+            //}
+
+            //nodeToInsert.Next = current.Next;
+            //current.Next = nodeToInsert;
+            ////Console.WriteLine("Node inserted.");
+            ////PrintLinkedList(newHead);
+
+            //// Delete node at position - 0 starting
+            //PrintLinkedList(newHead);
+            //position = 2;
+            //counter = 1;
+            //current = newHead;
+
+            //while (counter < position)
+            //{
+            //    current = current.Next;
+            //    counter++;
+            //}
+
+            //current.Next = current.Next.Next;
+            //Console.WriteLine("Node removed from list.");
             //PrintLinkedList(newHead);
 
-            // Insert node at position - 0 starting
-            //PrintLinkedList(newHead);
-            SinglyLinkedListNode nodeToInsert = new SinglyLinkedListNode() { Data = 2222, Next = null };
-            int position = 2;
-            int counter = 1;
-            SinglyLinkedListNode current = newHead;
-            
-            while (counter < position)
-            {
-                current = current.Next;
-                counter++;
-            }
-
-            nodeToInsert.Next = current.Next;
-            current.Next = nodeToInsert;
-            //Console.WriteLine("Node inserted.");
-            //PrintLinkedList(newHead);
-
-            // Delete node at position - 0 starting
-            PrintLinkedList(newHead);
-            position = 2;
-            counter = 1;
-            current = newHead;
-
-            while (counter < position)
-            {
-                current = current.Next;
-                counter++;
-            }
-
-            current.Next = current.Next.Next;
-            Console.WriteLine("Node removed from list.");
-            PrintLinkedList(newHead);
-
-            // Reverse print a linked list
-            ReversePrintRecursive(newHead);
+            //// Reverse print a linked list
+            //ReversePrintRecursive(newHead);
             #endregion
 
+            #region String exercises
 
+            // First non-repeating character in the string - that character is only there once
+            string input1 = "aaabcccdeeef"; // b
+            string input2 = "abcbad"; // c
+            string input3 = "abcabcabc"; // _
+            Console.WriteLine(StringExercises.FirstNonRepeatingTNSquared(input1));
+            Console.WriteLine(StringExercises.FirstNonRepeatingTNSquared(input2));
+            Console.WriteLine(StringExercises.FirstNonRepeatingTNSquared(input3));
+            Console.WriteLine("O 2N w Dictionary");
+            Console.WriteLine(StringExercises.FirstNonRepeatingTN2Dictionary(input1));
+            Console.WriteLine(StringExercises.FirstNonRepeatingTN2Dictionary(input2));
+            Console.WriteLine(StringExercises.FirstNonRepeatingTN2Dictionary(input3));
+            Console.WriteLine("O 2N w Array");
+            Console.WriteLine(StringExercises.FirstNonRepeatingTN2Array(input1));
+            Console.WriteLine(StringExercises.FirstNonRepeatingTN2Array(input2));
+            Console.WriteLine(StringExercises.FirstNonRepeatingTN2Array(input3));
+
+
+            #endregion
 
         }
     }
