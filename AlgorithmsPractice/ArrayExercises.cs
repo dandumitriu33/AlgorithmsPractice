@@ -183,6 +183,60 @@ namespace AlgorithmsPractice
             Console.WriteLine($"The index of {target} is {resultingIndex}.");
             return resultingIndex;
         }
+        public static int ShiftedArraySearch(int[] shiftedArray, int number)
+        {
+            int pivot = FindPivotPoint(shiftedArray);
 
+            if (pivot == 0 || number < shiftedArray[0])
+            {
+                return ShiftedBinarySearch(shiftedArray, pivot, shiftedArray.Length - 1 , number);
+            }
+            return ShiftedBinarySearch(shiftedArray, 0, pivot-1, number);
+        }
+
+        private static int FindPivotPoint(int[] arr)
+        {
+            int left = 0;
+            int right = arr.Length - 1;
+
+            while (left <= right)
+            {
+                int midpoint = left + (right - left) / 2;
+                if (midpoint == 0 || arr[midpoint] < arr[midpoint -1])
+                {
+                    return midpoint;
+                }
+                else if (arr[midpoint] > arr[0])
+                {
+                    left = midpoint + 1;
+                }
+                else
+                {
+                    right = midpoint - 1;
+                }
+            }
+            return 0;
+        }
+        private static int ShiftedBinarySearch(int[] arr, int left, int right, int target)
+        {
+            while (left <= right)
+            {
+                int midpoint = left + (right - left) / 2;
+                if (arr[midpoint] < target)
+                {
+                    left = midpoint + 1;
+                }
+                else if (arr[midpoint] == target)
+                {
+                    return midpoint;
+                }
+                else
+                {
+                    right = midpoint - 1;
+                }
+            }
+
+            return -1;
+        }
     }
 }

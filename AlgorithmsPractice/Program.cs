@@ -52,12 +52,15 @@ namespace AlgorithmsPractice
             ////}
             //ArrayExercises.FlipInvert(sourceArray);
 
-            // Binary search
-            int[] sourceArray = new int[] { -1, 0, 3, 5, 9, 12 };
-            int target = 9;
-            ArrayExercises.BinarySearch(sourceArray, target);
+            // Binary search - sorted array
+            //int[] sourceArray = new int[] { -1, 0, 3, 5, 9, 12 };
+            //int target = 9;
+            //ArrayExercises.BinarySearch(sourceArray, target);
 
-
+            // Shifted Array Search - sorted array
+            int[] sourceArray = new int[] { 9, 12, 17, 2, 4, 5 };
+            int target = 2;
+            Console.WriteLine($"The index for {target} is {ArrayExercises.ShiftedArraySearch(sourceArray, target)}");
 
 
             #endregion
