@@ -86,12 +86,18 @@ namespace AlgorithmsPractice
             //PrintLinkedList(head);
 
             // Insert  node at the Tail of the Linked List
-            PrintLinkedList(head);
+            //PrintLinkedList(head);
             SinglyLinkedListNode tailNode = new SinglyLinkedListNode() { Data = 60, Next = null };
             SinglyLinkedListNode tail = AddToTail(head, tailNode);
-            Console.WriteLine("Tail added.");
-            PrintLinkedList(head);
+            //Console.WriteLine("Tail added.");
+            //PrintLinkedList(head);
 
+            // Insert node at the Head
+            PrintLinkedList(head);
+            SinglyLinkedListNode newHead = new SinglyLinkedListNode() { Data = 10, Next = null };
+            newHead.Next = head;
+            Console.WriteLine("New Head added");
+            PrintLinkedList(newHead);
 
 
             #endregion
