@@ -1,4 +1,5 @@
 ﻿using System;
+using static AlgorithmsPractice.LinkedListExercises;
 
 namespace AlgorithmsPractice
 {
@@ -58,14 +59,35 @@ namespace AlgorithmsPractice
             //ArrayExercises.BinarySearch(sourceArray, target);
 
             // Shifted Array Search - sorted array
-            int[] sourceArray = new int[] { 9, 12, 17, 2, 4, 5 };
-            int target = 2;
-            Console.WriteLine($"The index for {target} is {ArrayExercises.ShiftedArraySearch(sourceArray, target)}");
-
+            //int[] sourceArray = new int[] { 9, 12, 17, 2, 4, 5 };
+            //int target = 2;
+            //Console.WriteLine($"The index for {target} is {ArrayExercises.ShiftedArraySearch(sourceArray, target)}");
 
             #endregion
 
+            #region Linked Lists exercises
+            // Print the elements of a Linked List w/ insert
+            SinglyLinkedListNode head = new SinglyLinkedListNode() { Data = 12, Next = null };
 
+            SinglyLinkedListNode first = new SinglyLinkedListNode() { Data = 24, Next = null };
+            head.Next = first;
+
+            SinglyLinkedListNode second = new SinglyLinkedListNode() { Data = 36, Next = null };
+            first.Next = second;
+
+            SinglyLinkedListNode third = new SinglyLinkedListNode() { Data = 48, Next = null };
+            second.Next = third;
+
+            SinglyLinkedListNode insertTest = new SinglyLinkedListNode() { Data = 16, Next = null };
+            insertTest.Next = head.Next;
+            head.Next = insertTest;
+
+            PrintLinkedList(head);
+
+
+
+
+            #endregion
 
 
 
