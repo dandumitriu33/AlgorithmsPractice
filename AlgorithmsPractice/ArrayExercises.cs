@@ -7,6 +7,60 @@ namespace AlgorithmsPractice
 {
     public class ArrayExercises
     {
+        public static int FirstDuplicateTONSquared(int[] input)
+        {
+            int minimumSecondIndex = input.Length - 1;
+            for (int i = 0; i < input.Length; i++)
+            {
+                for (int j = i+1; j < input.Length; j++)
+                {
+                    if (input[i] == input[j])
+                    {
+                        minimumSecondIndex = Math.Min(minimumSecondIndex, j);
+                    }
+                }
+            }
+            if (minimumSecondIndex == input.Length - 1)
+            {
+                return -1;
+            }
+            else
+            {
+                return input[minimumSecondIndex];
+            }
+        }
+        public static int FirstDuplicateHashSet(int[] input)
+        {
+            HashSet<int> seen = new HashSet<int>();
+            for (int i = 0; i < input.Length; i++)
+            {
+                if (seen.Contains(input[i]))
+                {
+                    return input[i];
+                }
+                else
+                {
+                    seen.Add(input[i]);
+                }
+            }
+            return -1;
+        }
+        public static int FirstDuplicateTrick(int[] input)
+        {
+            for (int i = 0; i < input.Length; i++)
+            {
+                if (input[Math.Abs(input[i]) - 1] < 0)
+                {
+                    return Math.Abs(input[i]);
+                }
+                else
+                {
+                    input[Math.Abs(input[i]) - 1] = -input[Math.Abs(input[i]) - 1];
+                }
+            }
+            return -1;
+        }
+
         public static int[] ReverseArray(int[] sourceArray)
         {
             int[] result = new int[sourceArray.Length];
@@ -193,7 +247,6 @@ namespace AlgorithmsPractice
             }
             return ShiftedBinarySearch(shiftedArray, 0, pivot-1, number);
         }
-
         private static int FindPivotPoint(int[] arr)
         {
             int left = 0;

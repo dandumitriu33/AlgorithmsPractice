@@ -14,7 +14,23 @@ namespace AlgorithmsPractice
             int[] array1 = new int[6] { 1, 2, 1, 2, 3, 3 }; // 1
             int[] array2 = new int[6] { 2, 1, 3, 5, 3, 2 }; // 3
             int[] array3 = new int[6] { 1, 2, 3, 4, 5, 6 }; // -1
-
+            Console.WriteLine("O(N^2) time complexity");
+            Console.WriteLine(ArrayExercises.FirstDuplicateTONSquared(array1)); 
+            Console.WriteLine(ArrayExercises.FirstDuplicateTONSquared(array2)); 
+            Console.WriteLine(ArrayExercises.FirstDuplicateTONSquared(array3));
+            Console.WriteLine("Time Complexity O(N) Space Complexity O(N) via HashSet w/ contains.");
+            Console.WriteLine(ArrayExercises.FirstDuplicateHashSet(array1));
+            Console.WriteLine(ArrayExercises.FirstDuplicateHashSet(array2));
+            Console.WriteLine(ArrayExercises.FirstDuplicateHashSet(array3));
+            // between 1 and array.length detail
+            // use a trick where we iterate through the array and the number we are looking at abs(it) like an index
+            // we check if the number before that index is negative
+            // if not we then make the number before it negative
+            // if yes - then this is a number we have seen before so return it and end the process
+            Console.WriteLine("Time Complexity O(N) Space Complexity not modified");
+            Console.WriteLine(ArrayExercises.FirstDuplicateTrick(array1));
+            Console.WriteLine(ArrayExercises.FirstDuplicateTrick(array2));
+            Console.WriteLine(ArrayExercises.FirstDuplicateTrick(array3));
 
             // Reverse an array
             //int[] sourceArray = new int[5] { 9, 8, 7, 6, 5 }; // expected 5, 6, 7, 8, 9
