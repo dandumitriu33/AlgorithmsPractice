@@ -9,25 +9,43 @@ namespace AlgorithmsPractice
         {
             #region Array exercises
 
-            // Find longest sub-array by sum
-            // we have an array of unsorted numbers and a sum X
-            // find the longest part of the array where all the values add up to X - length
-            // [ 1, 2, 3, 7, 5] = 2, 3, 7 longer than 7, 5 - s= 12, r = [2,4]
-            int[] input = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
-            int[] input2 = new int[] { 1, 2, 3, 4, 5, 0, 0, 0, 6, 7, 8, 9, 10 };
-            int sum = 15;
-            // expected on input 1 = r = [1,5] meaning 1 to 5 not 4, 5, 6 because longer
-            // on input 2: 1 8
-            // input 2 is the same but to the last 0
-            // Sliding window approach
-            int[] result = ArrayExercises.LongestSubArraySlidingWindow(input2, sum);
-            foreach (var item in result)
-            {
-                Console.Write($"{item} ");
-            }
+            // Kadane
+            // array of integers, find max sum you can get from one of its contiguous subarrays
+            // contiguous = next or together in sequence
+            // sub-array - any length - all elements need to be next to each other
+            // [-2, 2, 5, -11, 6]
+            // [-2, 2, 5, -11, 6] sum is 0
+            // [2] is a sub array and the sum is 2
+            // [5, -11] sum is -6 and so on
+            // find the sub-array with the largest sum
+            // here is [ 2, 5] sum is 7
+            // Kadane explanation
+            // make an initial max sub array init at first element value
+            // make a current sub array variable current
+            // loop through the array and at every step ask: is the current sum + element we are looking at > the element we are looking at
+            // if yes => the current sub array remains and becoes the new current sub array including the element
+            // if no => the new element starts a new sub-array with it in it as the sole element
+            // at each step we compare current sub array with the max sub array
+            int[] input = new int[] { -2, 2, 5, -11, 6 };
+            Console.WriteLine(ArrayExercises.Kadane(input)); // expected 7
 
 
-
+            //// Find longest sub-array by sum
+            //// we have an array of unsorted numbers and a sum X
+            //// find the longest part of the array where all the values add up to X - length
+            //// [ 1, 2, 3, 7, 5] = 2, 3, 7 longer than 7, 5 - s= 12, r = [2,4]
+            //int[] input = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+            //int[] input2 = new int[] { 1, 2, 3, 4, 5, 0, 0, 0, 6, 7, 8, 9, 10 };
+            //int sum = 15;
+            //// expected on input 1 = r = [1,5] meaning 1 to 5 not 4, 5, 6 because longer
+            //// on input 2: 1 8
+            //// input 2 is the same but to the last 0
+            //// Sliding window approach
+            //int[] result = ArrayExercises.LongestSubArraySlidingWindow(input2, sum);
+            //foreach (var item in result)
+            //{
+            //    Console.Write($"{item} ");
+            //}
 
             //// First int duplicate in Array - values only between 1 and array.length; all positive
             //// the first occurence of the 2nd number - the number itself not the index

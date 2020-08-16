@@ -7,6 +7,17 @@ namespace AlgorithmsPractice
 {
     public class ArrayExercises
     {
+        public static int Kadane(int[] input)
+        {
+            int maxSum = input[0];
+            int currentSum = maxSum;
+            for (int i = 0; i < input.Length; i++)
+            {
+                currentSum = Math.Max(input[i] + currentSum, input[i]);
+                maxSum = Math.Max(currentSum, maxSum);
+            }
+            return maxSum;
+        }
         public static int[] LongestSubArraySlidingWindow(int[] input, int givenSum)
         {
             int[] result = new int[] { -1 };
@@ -30,8 +41,6 @@ namespace AlgorithmsPractice
             }
             return result;
         }
-
-
         public static int FirstDuplicateTONSquared(int[] input)
         {
             int minimumSecondIndex = input.Length - 1;
