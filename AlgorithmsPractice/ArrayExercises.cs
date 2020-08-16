@@ -156,6 +156,33 @@ namespace AlgorithmsPractice
 
             return input;
         }
+        public static int BinarySearch(int[] nums, int target)
+        {
+            int resultingIndex = -1;
+            int left = 0;
+            int right = nums.Length - 1;
+
+            while (left <= right)
+            {
+                int midpoint = left + (right - left) / 2;
+                if (nums[midpoint] == target)
+                {
+                    resultingIndex = midpoint;
+                    break;
+                }
+                else if (nums[midpoint] > target)
+                {
+                    right = midpoint - 1;
+                }
+                else
+                {
+                    left = midpoint + 1;
+                }
+            }
+            // printing
+            Console.WriteLine($"The index of {target} is {resultingIndex}.");
+            return resultingIndex;
+        }
 
     }
 }

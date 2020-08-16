@@ -6,6 +6,7 @@ namespace AlgorithmsPractice
     {
         static void Main(string[] args)
         {
+            #region Array exercises
             // Reverse an array
             //int[] sourceArray = new int[5] { 9, 8, 7, 6, 5 }; // expected 5, 6, 7, 8, 9
             //ArrayExercises.ReverseArray(sourceArray);
@@ -35,21 +36,31 @@ namespace AlgorithmsPractice
             //ArrayExercises.SortArrayParityTONSO1(sourceArray);
 
             // Flip Invert an array of binary values (trick solution with pointers)
-            int[,] sourceArray = new int[,] 
-            {
-                { 1, 1, 0, 0 },
-                { 1, 0, 0, 1 },
-                { 0, 1, 1, 1 },
-                { 1, 0, 1, 0}
-            };
-            // expected result
+            //int[,] sourceArray = new int[,] 
             //{
-            //    { 1, 1, 0, 0},
-            //    { 0, 1, 1, 0},
-            //    { 0, 0, 0, 1},
+            //    { 1, 1, 0, 0 },
+            //    { 1, 0, 0, 1 },
+            //    { 0, 1, 1, 1 },
             //    { 1, 0, 1, 0}
-            //}
-            ArrayExercises.FlipInvert(sourceArray);
+            //};
+            //// expected result
+            ////{
+            ////    { 1, 1, 0, 0},
+            ////    { 0, 1, 1, 0},
+            ////    { 0, 0, 0, 1},
+            ////    { 1, 0, 1, 0}
+            ////}
+            //ArrayExercises.FlipInvert(sourceArray);
+
+            // Binary search
+            int[] sourceArray = new int[] { -1, 0, 3, 5, 9, 12 };
+            int target = 9;
+            ArrayExercises.BinarySearch(sourceArray, target);
+
+
+
+
+            #endregion
 
 
 
