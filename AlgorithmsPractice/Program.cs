@@ -93,13 +93,29 @@ namespace AlgorithmsPractice
             //PrintLinkedList(head);
 
             // Insert node at the Head
-            PrintLinkedList(head);
+            //PrintLinkedList(head);
             SinglyLinkedListNode newHead = new SinglyLinkedListNode() { Data = 10, Next = null };
             newHead.Next = head;
-            Console.WriteLine("New Head added");
+            //Console.WriteLine("New Head added");
+            //PrintLinkedList(newHead);
+
+            // Insert node at position - 0 starting
             PrintLinkedList(newHead);
+            SinglyLinkedListNode nodeToInsert = new SinglyLinkedListNode() { Data = 2222, Next = null };
+            int position = 2;
+            int counter = 1;
+            SinglyLinkedListNode current = newHead;
+            
+            while (counter < position)
+            {
+                current = current.Next;
+                counter++;
+            }
 
-
+            nodeToInsert.Next = current.Next;
+            current.Next = nodeToInsert;
+            Console.WriteLine("Node inserted.");
+            PrintLinkedList(newHead);
             #endregion
 
 
