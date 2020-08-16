@@ -100,7 +100,7 @@ namespace AlgorithmsPractice
             //PrintLinkedList(newHead);
 
             // Insert node at position - 0 starting
-            PrintLinkedList(newHead);
+            //PrintLinkedList(newHead);
             SinglyLinkedListNode nodeToInsert = new SinglyLinkedListNode() { Data = 2222, Next = null };
             int position = 2;
             int counter = 1;
@@ -114,8 +114,25 @@ namespace AlgorithmsPractice
 
             nodeToInsert.Next = current.Next;
             current.Next = nodeToInsert;
-            Console.WriteLine("Node inserted.");
+            //Console.WriteLine("Node inserted.");
+            //PrintLinkedList(newHead);
+
+            // Delete node at position - 0 starting
             PrintLinkedList(newHead);
+            position = 2;
+            counter = 1;
+            current = newHead;
+
+            while (counter < position)
+            {
+                current = current.Next;
+                counter++;
+            }
+
+            current.Next = current.Next.Next;
+            Console.WriteLine("Node removed from list.");
+            PrintLinkedList(newHead);
+
             #endregion
 
 
