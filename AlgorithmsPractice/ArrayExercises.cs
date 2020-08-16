@@ -7,6 +7,31 @@ namespace AlgorithmsPractice
 {
     public class ArrayExercises
     {
+        public static int[] LongestSubArraySlidingWindow(int[] input, int givenSum)
+        {
+            int[] result = new int[] { -1 };
+
+            int sum = 0;
+            int left = 0;
+            int right = 0;
+
+            while (right < input.Length)
+            {
+                sum += input[right];
+                while (left < right && sum > givenSum)
+                {
+                    sum -= input[left++];
+                }
+                if (sum == givenSum && (result.Length == 1 || result[1] - result[0] < right - left))
+                {
+                    result = new int[] { left + 1, right + 1 };
+                }
+                right++;
+            }
+            return result;
+        }
+
+
         public static int FirstDuplicateTONSquared(int[] input)
         {
             int minimumSecondIndex = input.Length - 1;
@@ -60,7 +85,6 @@ namespace AlgorithmsPractice
             }
             return -1;
         }
-
         public static int[] ReverseArray(int[] sourceArray)
         {
             int[] result = new int[sourceArray.Length];

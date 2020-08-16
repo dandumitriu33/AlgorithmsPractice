@@ -9,28 +9,48 @@ namespace AlgorithmsPractice
         {
             #region Array exercises
 
-            // First int duplicate in Array - values only between 1 and array.length; all positive
-            // the first occurence of the 2nd number - the number itself not the index
-            int[] array1 = new int[6] { 1, 2, 1, 2, 3, 3 }; // 1
-            int[] array2 = new int[6] { 2, 1, 3, 5, 3, 2 }; // 3
-            int[] array3 = new int[6] { 1, 2, 3, 4, 5, 6 }; // -1
-            Console.WriteLine("O(N^2) time complexity");
-            Console.WriteLine(ArrayExercises.FirstDuplicateTONSquared(array1)); 
-            Console.WriteLine(ArrayExercises.FirstDuplicateTONSquared(array2)); 
-            Console.WriteLine(ArrayExercises.FirstDuplicateTONSquared(array3));
-            Console.WriteLine("Time Complexity O(N) Space Complexity O(N) via HashSet w/ contains.");
-            Console.WriteLine(ArrayExercises.FirstDuplicateHashSet(array1));
-            Console.WriteLine(ArrayExercises.FirstDuplicateHashSet(array2));
-            Console.WriteLine(ArrayExercises.FirstDuplicateHashSet(array3));
-            // between 1 and array.length detail
-            // use a trick where we iterate through the array and the number we are looking at abs(it) like an index
-            // we check if the number before that index is negative
-            // if not we then make the number before it negative
-            // if yes - then this is a number we have seen before so return it and end the process
-            Console.WriteLine("Time Complexity O(N) Space Complexity not modified");
-            Console.WriteLine(ArrayExercises.FirstDuplicateTrick(array1));
-            Console.WriteLine(ArrayExercises.FirstDuplicateTrick(array2));
-            Console.WriteLine(ArrayExercises.FirstDuplicateTrick(array3));
+            // Find longest sub-array by sum
+            // we have an array of unsorted numbers and a sum X
+            // find the longest part of the array where all the values add up to X - length
+            // [ 1, 2, 3, 7, 5] = 2, 3, 7 longer than 7, 5 - s= 12, r = [2,4]
+            int[] input = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+            int[] input2 = new int[] { 1, 2, 3, 4, 5, 0, 0, 0, 6, 7, 8, 9, 10 };
+            int sum = 15;
+            // expected on input 1 = r = [1,5] meaning 1 to 5 not 4, 5, 6 because longer
+            // on input 2: 1 8
+            // input 2 is the same but to the last 0
+            // Sliding window approach
+            int[] result = ArrayExercises.LongestSubArraySlidingWindow(input2, sum);
+            foreach (var item in result)
+            {
+                Console.Write($"{item} ");
+            }
+
+
+
+
+            //// First int duplicate in Array - values only between 1 and array.length; all positive
+            //// the first occurence of the 2nd number - the number itself not the index
+            //int[] array1 = new int[6] { 1, 2, 1, 2, 3, 3 }; // 1
+            //int[] array2 = new int[6] { 2, 1, 3, 5, 3, 2 }; // 3
+            //int[] array3 = new int[6] { 1, 2, 3, 4, 5, 6 }; // -1
+            //Console.WriteLine("O(N^2) time complexity");
+            //Console.WriteLine(ArrayExercises.FirstDuplicateTONSquared(array1)); 
+            //Console.WriteLine(ArrayExercises.FirstDuplicateTONSquared(array2)); 
+            //Console.WriteLine(ArrayExercises.FirstDuplicateTONSquared(array3));
+            //Console.WriteLine("Time Complexity O(N) Space Complexity O(N) via HashSet w/ contains.");
+            //Console.WriteLine(ArrayExercises.FirstDuplicateHashSet(array1));
+            //Console.WriteLine(ArrayExercises.FirstDuplicateHashSet(array2));
+            //Console.WriteLine(ArrayExercises.FirstDuplicateHashSet(array3));
+            //// between 1 and array.length detail
+            //// use a trick where we iterate through the array and the number we are looking at abs(it) like an index
+            //// we check if the number before that index is negative
+            //// if not we then make the number before it negative
+            //// if yes - then this is a number we have seen before so return it and end the process
+            //Console.WriteLine("Time Complexity O(N) Space Complexity not modified");
+            //Console.WriteLine(ArrayExercises.FirstDuplicateTrick(array1));
+            //Console.WriteLine(ArrayExercises.FirstDuplicateTrick(array2));
+            //Console.WriteLine(ArrayExercises.FirstDuplicateTrick(array3));
 
             // Reverse an array
             //int[] sourceArray = new int[5] { 9, 8, 7, 6, 5 }; // expected 5, 6, 7, 8, 9
