@@ -66,7 +66,7 @@ namespace AlgorithmsPractice
             #endregion
 
             #region Linked Lists exercises
-            // Print the elements of a Linked List w/ insert
+            
             SinglyLinkedListNode head = new SinglyLinkedListNode() { Data = 12, Next = null };
 
             SinglyLinkedListNode first = new SinglyLinkedListNode() { Data = 24, Next = null };
@@ -82,8 +82,15 @@ namespace AlgorithmsPractice
             insertTest.Next = head.Next;
             head.Next = insertTest;
 
-            PrintLinkedList(head);
+            // Print the elements of a Linked List w/ insert
+            //PrintLinkedList(head);
 
+            // Insert  node at the Tail of the Linked List
+            PrintLinkedList(head);
+            SinglyLinkedListNode tailNode = new SinglyLinkedListNode() { Data = 60, Next = null };
+            SinglyLinkedListNode tail = AddToTail(head, tailNode);
+            Console.WriteLine("Tail added.");
+            PrintLinkedList(head);
 
 
 

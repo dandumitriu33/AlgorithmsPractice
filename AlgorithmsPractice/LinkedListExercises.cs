@@ -22,5 +22,16 @@ namespace AlgorithmsPractice
                 current = current.Next;
             }
         }
+
+        public static SinglyLinkedListNode AddToTail(SinglyLinkedListNode head, SinglyLinkedListNode tail)
+        {
+            SinglyLinkedListNode current = head;
+            while (current.Next != null)
+            {
+                current = current.Next;
+            }
+            current.Next = tail;
+            return current;
+        }
     }
 }
