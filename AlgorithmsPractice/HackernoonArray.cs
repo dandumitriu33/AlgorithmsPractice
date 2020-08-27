@@ -95,5 +95,21 @@ namespace AlgorithmsPractice
 
         }
 
+        public static void FindMultipleDuplicates(int[] arr)
+        {
+            Dictionary<int, int> numbers = new Dictionary<int, int>();
+            foreach (int number in arr)
+            {
+                if (numbers.ContainsKey(number))
+                {
+                    Console.WriteLine($"Duplicate found: {number}");
+                }
+                else
+                {
+                    numbers.Add(number, 1);
+                }
+            }
+        }
+
     }
 }
