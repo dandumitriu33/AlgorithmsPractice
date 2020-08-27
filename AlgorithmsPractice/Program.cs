@@ -1,5 +1,6 @@
 ﻿using System;
 using static AlgorithmsPractice.LinkedListExercises;
+using static AlgorithmsPractice.HackernoonArray;
 
 namespace AlgorithmsPractice
 {
@@ -26,8 +27,8 @@ namespace AlgorithmsPractice
             // if yes => the current sub array remains and becoes the new current sub array including the element
             // if no => the new element starts a new sub-array with it in it as the sole element
             // at each step we compare current sub array with the max sub array
-            int[] input = new int[] { -2, 2, 5, -11, 6 };
-            Console.WriteLine(ArrayExercises.Kadane(input)); // expected 7
+            //int[] input = new int[] { -2, 2, 5, -11, 6 };
+            //Console.WriteLine(ArrayExercises.Kadane(input)); // expected 7
 
 
             //// Find longest sub-array by sum
@@ -220,6 +221,14 @@ namespace AlgorithmsPractice
             //Console.WriteLine(StringExercises.FirstNonRepeatingIndexEquality(input1));
             //Console.WriteLine(StringExercises.FirstNonRepeatingIndexEquality(input2));
             //Console.WriteLine(StringExercises.FirstNonRepeatingIndexEquality(input3));
+
+            #endregion
+
+            #region Hackernoon
+
+            int[] fullArray = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+            int[] arr = new int[] { 1, 2, 3, 4, 5, 6, 7, 9, 10 };
+            Console.WriteLine($"The missing number is: {HackernoonArray.FindMissingNumber(arr, fullArray)}");
 
             #endregion
 
