@@ -14,5 +14,24 @@ namespace AlgorithmsPractice
             int arrSum = arr.Sum();
             return total - arrSum;
         }
+
+        public static int FindDuplicateNumber(int[] arr)
+        {
+            Dictionary<int, int> numbers = new Dictionary<int, int>();
+            foreach (int number in arr)
+            {
+                if (numbers.ContainsKey(number))
+                {
+                    return number;
+                }
+                else
+                {
+                    numbers.Add(number, 1);
+                }
+            }
+
+            return 0;
+        }
+
     }
 }
