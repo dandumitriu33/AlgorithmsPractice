@@ -233,10 +233,13 @@ namespace AlgorithmsPractice
             //int[] arr = new int[] { 1, 2, 3, 4, 5, 6, 7, 1 };
             //Console.WriteLine($"The duplicate number is {HackernoonArray.FindDuplicateNumber(arr)}");
 
-            int[] arr = new int[] { 11, 2, 3, 4, 5, 6, 7, 9 };
-            HackernoonArray.FindLargestAndSmallest(arr);
+            //int[] arr = new int[] { 11, 2, 3, 4, 5, 6, 7, 9 };
+            //HackernoonArray.FindLargestAndSmallest(arr);
 
-
+            int[] arr = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 };
+            int sum = 12;
+            HackernoonArray.FindPairsThatSum(arr, sum);
+            HackernoonArray.FindPairsThatSumSortFirst(arr, sum);
 
 
 
