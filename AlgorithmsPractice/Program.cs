@@ -230,9 +230,11 @@ namespace AlgorithmsPractice
             //int[] arr = new int[] { 1, 2, 3, 4, 5, 6, 7, 9, 10 };
             //Console.WriteLine($"The missing number is: {HackernoonArray.FindMissingNumber(arr, fullArray)}");
 
-            int[] arr = new int[] { 1, 2, 3, 4, 5, 6, 7, 1 };
-            Console.WriteLine($"The duplicate number is {HackernoonArray.FindDuplicateNumber(arr)}");
+            //int[] arr = new int[] { 1, 2, 3, 4, 5, 6, 7, 1 };
+            //Console.WriteLine($"The duplicate number is {HackernoonArray.FindDuplicateNumber(arr)}");
 
+            int[] arr = new int[] { 11, 2, 3, 4, 5, 6, 7, 9 };
+            HackernoonArray.FindLargestAndSmallest(arr);
 
 
 

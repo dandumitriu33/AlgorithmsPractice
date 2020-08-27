@@ -33,5 +33,23 @@ namespace AlgorithmsPractice
             return 0;
         }
 
+        public static void FindLargestAndSmallest(int[] arr)
+        {
+            int largest = arr[0];
+            int smallest = arr[0];
+            foreach (int number in arr)
+            {
+                if (number > largest)
+                {
+                    largest = number;
+                }
+                else if (number < smallest)
+                {
+                    smallest = number;
+                }
+            }
+            Console.WriteLine($"The smallest number is {smallest} and the largest is {largest}");
+        }
+
     }
 }
