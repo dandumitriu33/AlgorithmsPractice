@@ -14,6 +14,7 @@ namespace AlgorithmsPractice
             int sum = 10;
             Console.WriteLine($"The first number is {TwoNumSumNN(numbers, sum)[0]} and the second {TwoNumSumNN(numbers, sum)[1]}.");
             Console.WriteLine($"The first number is {TwoNumSumON(numbers, sum)[0]} and the second {TwoNumSumON(numbers, sum)[1]}.");
+            Console.WriteLine($"The first number is {TwoNumSumSorted(numbers, sum)[0]} and the second {TwoNumSumSorted(numbers, sum)[1]}.");
             
 
 
