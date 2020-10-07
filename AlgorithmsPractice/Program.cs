@@ -1,6 +1,7 @@
 ﻿using System;
 using static AlgorithmsPractice.LinkedListExercises;
 using static AlgorithmsPractice.HackernoonArray;
+using static AlgorithmsPractice.October2020.TwoNumberOfSum;
 
 namespace AlgorithmsPractice
 {
@@ -8,6 +9,15 @@ namespace AlgorithmsPractice
     {
         static void Main(string[] args)
         {
+            #region Two Number Sum
+            int[] numbers = new int[] { 3, 5, -4, 8, 11, 1, -1, 6 };
+            int sum = 10;
+            Console.WriteLine($"The first number is {TwoNumSumNN(numbers, sum)[0]} and the second {TwoNumSumNN(numbers, sum)[1]}.");
+            
+
+
+            #endregion
+
             #region Array exercises
 
             // Kadane
@@ -241,8 +251,8 @@ namespace AlgorithmsPractice
             //HackernoonArray.FindPairsThatSum(arr, sum);
             //HackernoonArray.FindPairsThatSumSortFirst(arr, sum);
 
-            int[] arr = new int[] { 1, 2, 3, 4, 2, 5, 6, 7, 5, 8, 8, 9, 10, 11 };
-            HackernoonArray.FindMultipleDuplicates(arr);
+            //int[] arr = new int[] { 1, 2, 3, 4, 2, 5, 6, 7, 5, 8, 8, 9, 10, 11 };
+            //HackernoonArray.FindMultipleDuplicates(arr);
 
             #endregion
 
