@@ -13,6 +13,7 @@ namespace AlgorithmsPractice
             int[] numbers = new int[] { 3, 5, -4, 8, 11, 1, -1, 6 };
             int sum = 10;
             Console.WriteLine($"The first number is {TwoNumSumNN(numbers, sum)[0]} and the second {TwoNumSumNN(numbers, sum)[1]}.");
+            Console.WriteLine($"The first number is {TwoNumSumON(numbers, sum)[0]} and the second {TwoNumSumON(numbers, sum)[1]}.");
             
 
 
