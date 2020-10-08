@@ -12,7 +12,7 @@ namespace AlgorithmsPractice
     {
         static void Main(string[] args)
         {
-            #region Binary Search Tree
+            #region Binary Search Tree - find closest value
             List<int> numbers = new List<int>() { 50, 30, 20, 40, 70, 60, 80 };
             BinarySearchTree tree = new BinarySearchTree();
             for (int i = 0; i < numbers.Count; i++)
@@ -22,7 +22,16 @@ namespace AlgorithmsPractice
             tree.InOrder();
             Console.WriteLine($"Search result: {tree.Search(new NodeBST(20), 70).Value}");
 
-
+            List<int> numbers2 = new List<int>() { 10, 5, 15, 2, 5, 13, 22, 1, 14 };
+            BinarySearchTree tree2 = new BinarySearchTree();
+            for (int i = 0; i < numbers2.Count; i++)
+            {
+                tree2.Insert(numbers2[i]);
+                Console.WriteLine($"Added {numbers2[i]}");
+            }
+            int target = 12;
+            var result = tree2.FindClosestRecursive(target);
+            Console.WriteLine($"The closest number to {target} is {result}.");
 
             #endregion
 

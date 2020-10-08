@@ -72,5 +72,36 @@ namespace AlgorithmsPractice.October2020
             }
             return Search(root.Right, item);
         }
+
+        // Time Complexity - Average = O(log(N)) random tree; Worst Case = O(N) for one branch tree
+        // recursive is Space Complexity O(log(N)) for average and O(N) for one branch because it opens frames on the stack for each check
+        // iterative is Space Complexity O(1) becauseit doesn't stack frames on the stack like the recursive solution would 
+        public int FindClosestRecursive(int target)
+        {
+            return FindClosestValueInBstHelper(root, target, 0);
+        }
+        public int FindClosestValueInBstHelper(NodeBST rootNode, int target, int closest)
+        {
+            if (rootNode == null)
+            {
+                return closest;
+            }
+            if (Math.Abs(target - closest) > Math.Abs(target - rootNode.Value))
+            {
+                closest = rootNode.Value;
+            }
+            if (target < rootNode.Value)
+            {
+                return FindClosestValueInBstHelper(rootNode.Left, target, closest);
+            }
+            else if (target > rootNode.Value)
+            {
+                return FindClosestValueInBstHelper(rootNode.Right, target, closest);
+            }
+            else
+            {
+                return closest;
+            }
+        }
     }
 }
