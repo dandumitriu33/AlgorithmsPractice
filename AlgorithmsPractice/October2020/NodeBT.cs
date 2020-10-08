@@ -9,5 +9,11 @@ namespace AlgorithmsPractice.October2020
         public int Value { get; set; }
         public NodeBT Left { get; set; }
         public NodeBT Right { get; set; }
+        public NodeBT(int data)
+        {
+            Value = data;
+            Left = null;
+            Right = null;
+        }
     }
 }

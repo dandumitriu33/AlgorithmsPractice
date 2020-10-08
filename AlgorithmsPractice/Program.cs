@@ -13,10 +13,16 @@ namespace AlgorithmsPractice
         static void Main(string[] args)
         {
             #region Binary Tree - branch sums
+            BinaryTree tree2 = new BinaryTree();
+            int[] arr = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+            tree2.Root = tree2.InsertLevelOrder(arr, tree2.Root, 0);
+            tree2.PrintInOrder(tree2.Root);
 
-
-
-
+            List<int> result = tree2.BranchSums(tree2.Root);
+            foreach (var sum in result)
+            {
+                Console.Write($"{sum} ");
+            }
             #endregion
 
             #region Binary Search Tree - find closest value
