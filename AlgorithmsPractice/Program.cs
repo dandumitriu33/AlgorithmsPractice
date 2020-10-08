@@ -2,6 +2,9 @@
 using static AlgorithmsPractice.LinkedListExercises;
 using static AlgorithmsPractice.HackernoonArray;
 using static AlgorithmsPractice.October2020.TwoNumberOfSum;
+using System.Collections.Generic;
+using System.Linq.Expressions;
+using AlgorithmsPractice.October2020;
 
 namespace AlgorithmsPractice
 {
@@ -9,14 +12,25 @@ namespace AlgorithmsPractice
     {
         static void Main(string[] args)
         {
-            #region Two Number Sum
-            int[] numbers = new int[] { 3, 5, -4, 8, 11, 1, -1, 6 };
-            int sum = 10;
-            Console.WriteLine($"The first number is {TwoNumSumNN(numbers, sum)[0]} and the second {TwoNumSumNN(numbers, sum)[1]}.");
-            Console.WriteLine($"The first number is {TwoNumSumON(numbers, sum)[0]} and the second {TwoNumSumON(numbers, sum)[1]}.");
-            Console.WriteLine($"The first number is {TwoNumSumSorted(numbers, sum)[0]} and the second {TwoNumSumSorted(numbers, sum)[1]}.");
-            
+            #region Binary Search Tree
+            List<int> numbers = new List<int>() { 50, 30, 20, 40, 70, 60, 80 };
+            BinarySearchTree tree = new BinarySearchTree();
+            for (int i = 0; i < numbers.Count; i++)
+            {
+                tree.Insert(numbers[i]);
+            }
+            tree.InOrder();
 
+
+
+            #endregion
+
+            #region Two Number Sum
+            //int[] numbers = new int[] { 3, 5, -4, 8, 11, 1, -1, 6 };
+            //int sum = 10;
+            //Console.WriteLine($"The first number is {TwoNumSumNN(numbers, sum)[0]} and the second {TwoNumSumNN(numbers, sum)[1]}.");
+            //Console.WriteLine($"The first number is {TwoNumSumON(numbers, sum)[0]} and the second {TwoNumSumON(numbers, sum)[1]}.");
+            //Console.WriteLine($"The first number is {TwoNumSumSorted(numbers, sum)[0]} and the second {TwoNumSumSorted(numbers, sum)[1]}.");
 
             #endregion
 
