@@ -75,12 +75,12 @@ namespace AlgorithmsPractice.October2020
 
         // Time Complexity - Average = O(log(N)) random tree; Worst Case = O(N) for one branch tree
         // recursive is Space Complexity O(log(N)) for average and O(N) for one branch because it opens frames on the stack for each check
-        // iterative is Space Complexity O(1) becauseit doesn't stack frames on the stack like the recursive solution would 
+        // iterative is Space Complexity O(1) because it doesn't stack frames on the stack like the recursive solution
         public int FindClosestRecursive(int target)
         {
             return FindClosestValueInBstHelper(root, target, 0);
         }
-        public int FindClosestValueInBstHelper(NodeBST rootNode, int target, int closest)
+        private int FindClosestValueInBstHelper(NodeBST rootNode, int target, int closest)
         {
             if (rootNode == null)
             {
@@ -102,6 +102,37 @@ namespace AlgorithmsPractice.October2020
             {
                 return closest;
             }
+        }
+
+        // iterative implementation
+        public int FindClosestIterative(int target)
+        {
+            return FindClosestValueInBstHelperIterative(root, target, 0);
+        }
+
+        private int FindClosestValueInBstHelperIterative(NodeBST root, int target, int closest)
+        {
+            NodeBST currentNode = root;
+            while (currentNode != null)
+            {
+                if (Math.Abs(target - closest) > Math.Abs(target - currentNode.Value))
+                {
+                    closest = currentNode.Value;
+                }
+                if (target < currentNode.Value)
+                {
+                    currentNode = currentNode.Left;
+                }
+                else if (target > currentNode.Value)
+                {
+                    currentNode = currentNode.Right;
+                }
+                else
+                {
+                    break;
+                }
+            }
+            return closest;
         }
     }
 }

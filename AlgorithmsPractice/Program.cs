@@ -31,7 +31,9 @@ namespace AlgorithmsPractice
             }
             int target = 12;
             var result = tree2.FindClosestRecursive(target);
-            Console.WriteLine($"The closest number to {target} is {result}.");
+            var result2 = tree2.FindClosestIterative(target);
+            Console.WriteLine($"The closest number to {target} is {result}. Recursive solution.");
+            Console.WriteLine($"The closest number to {target} is {result2}. Iterative solution.");
 
             #endregion
 
