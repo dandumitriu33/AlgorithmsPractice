@@ -58,5 +58,19 @@ namespace AlgorithmsPractice.October2020
                 InOrderRec(root.Right);
             }
         }
+
+        // search
+        public NodeBST Search(NodeBST rootNode, int item)
+        {
+            if (rootNode == null || rootNode.Value == item)
+            {
+                return rootNode;
+            }
+            if (root.Value > item)
+            {
+                return Search(root.Left, item);
+            }
+            return Search(root.Right, item);
+        }
     }
 }

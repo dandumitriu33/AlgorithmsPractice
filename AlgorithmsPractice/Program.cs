@@ -20,6 +20,7 @@ namespace AlgorithmsPractice
                 tree.Insert(numbers[i]);
             }
             tree.InOrder();
+            Console.WriteLine($"Search result: {tree.Search(new NodeBST(20), 70).Value}");
 
 
 
