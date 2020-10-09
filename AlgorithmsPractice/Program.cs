@@ -12,11 +12,21 @@ namespace AlgorithmsPractice
     {
         static void Main(string[] args)
         {
+            #region Rectangle into squares
+            int length = 377;
+            int width = 52;
+            List<int> sizes = RectangleIntoSquares.FindSquareSizes(length, width);
+            foreach (var size in sizes)
+            {
+                Console.WriteLine(size);
+            }
+
+            #endregion
 
             #region Supermarket Queue
-            int[] customersQueue = { 10, 2, 3, 3 };
-            int numberOfQueues = 2;
-            Console.WriteLine(SupermarketQueue.CalculateTime(customersQueue, numberOfQueues));
+            //int[] customersQueue = { 10, 2, 3, 3 };
+            //int numberOfQueues = 2;
+            //Console.WriteLine(SupermarketQueue.CalculateTime(customersQueue, numberOfQueues));
 
             #endregion
 
