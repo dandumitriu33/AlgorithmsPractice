@@ -8,6 +8,7 @@ namespace AlgorithmsPractice.October2020
     {
         public static string ProcessString(string input)
         {
+            // each # is considered a Backspace and when it is met, it removes a letter from the string
             // indexing is the fastest way apparently to iterate through a string
             // https://stackoverflow.com/questions/8793762/what-is-the-fastest-way-to-iterate-through-individual-characters-in-a-string-in
 

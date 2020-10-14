@@ -12,11 +12,18 @@ namespace AlgorithmsPractice
     {
         static void Main(string[] args)
         {
+            #region number to string with commas
+
+            int input = 2133331123;
+            Console.WriteLine(StringWithCommas3.CommaAt3(input));
+
+            #endregion
+
             #region Backspaces string processing
 
-            //string input = "abc#d##c";
-            string input = "abc##d######";
-            Console.WriteLine(BackspaceStringProcessing.ProcessString(input));
+            ////string input = "abc#d##c";
+            //string input = "abc##d######";
+            //Console.WriteLine(BackspaceStringProcessing.ProcessString(input));
 
             #endregion
 
