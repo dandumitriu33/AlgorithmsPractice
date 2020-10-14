@@ -12,14 +12,22 @@ namespace AlgorithmsPractice
     {
         static void Main(string[] args)
         {
+            #region Backspaces string processing
+
+            //string input = "abc#d##c";
+            string input = "abc##d######";
+            Console.WriteLine(BackspaceStringProcessing.ProcessString(input));
+
+            #endregion
+
             #region Rectangle into squares
-            int length = 377;
-            int width = 52;
-            List<int> sizes = RectangleIntoSquares.FindSquareSizes(length, width);
-            foreach (var size in sizes)
-            {
-                Console.WriteLine(size);
-            }
+            //int length = 377;
+            //int width = 52;
+            //List<int> sizes = RectangleIntoSquares.FindSquareSizes(length, width);
+            //foreach (var size in sizes)
+            //{
+            //    Console.WriteLine(size);
+            //}
 
             #endregion
 
